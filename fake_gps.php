@@ -2,6 +2,8 @@
         //Enter your code here, enjoy!
 
 class fake_gps{
+        
+    const METR_ = (1/111111);
     
     private $latitude;
     private $longtitude;
@@ -29,8 +31,11 @@ class fake_gps{
     public function _change_position($method){
         switch($method){
             case:'around'
-            
+                $this->__get_random_around($radius);
         }
+    }
+    public setStep($step){ 
+        $this->step($step);
     }
     
     protected function __get_random_around($radius){
@@ -48,6 +53,7 @@ class fake_gps{
         
         $rand_la = rand($min_la[0],$max_la[0]).'.'.rand($min_la[1],$max_la[1]);
         $rand_lo = rand($min_lo[0],$max_lo[0]).'.'.rand($min_lo[1],$max_lo[1]);
+            
         return ['longitude' => $rand_lo, 'latitude' => $rand_la]
     }
     
