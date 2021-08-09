@@ -54,8 +54,22 @@ class fake_gps{
         $rand_la = rand($min_la[0],$max_la[0]).'.'.rand($min_la[1],$max_la[1]);
         $rand_lo = rand($min_lo[0],$max_lo[0]).'.'.rand($min_lo[1],$max_lo[1]);
             
-        return ['longitude' => $rand_lo, 'latitude' => $rand_la]
+        return ['longitude' => $rand_lo, 'latitude' => $rand_la];
     }
     
+    protected function _snake(){
+       /*
+       (you here)--------------|
+       |-----------------------<
+       >-----------------------|
+       |-----------------------<
+       
+       you need :
+                - step
+                - range
+       */
+       
+       return true;
+    }
 
 }
